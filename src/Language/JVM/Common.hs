@@ -17,6 +17,7 @@ import Data.Array
 import Data.Int
 import Data.Word
 import Text.PrettyPrint
+import Prelude hiding ((<>))
 
 -- | Replace '/' characters with '.' characters
 slashesToDots :: String -> String

@@ -41,7 +41,7 @@ import Data.List as L
 import Data.Map (Map)
 import qualified Data.Map as M
 import Data.Maybe
-import Prelude hiding (rem)
+import Prelude hiding (rem, (<>))
 import Text.PrettyPrint
 
 import Language.JVM.Common
