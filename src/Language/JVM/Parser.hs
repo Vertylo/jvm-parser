@@ -18,7 +18,11 @@ module Language.JVM.Parser (
   , stackWidth
   , isFloatType
   , isRefType
+  , constantPool
+  , poolUtf8
+  , ConstantPool
   , ConstantPoolValue(..)
+  , ConstantPoolInfo(..)
   , Attribute(..)
   , Visibility(..)
   -- * SerDes helpers
@@ -66,6 +70,7 @@ module Language.JVM.Parser (
   , methodMaxLocals
   , methodIsNative
   , methodIsAbstract
+  , methodIsFinal
   , methodBody
   , MethodBody(..)
   , methodExceptionTable
@@ -931,7 +936,7 @@ data Method = Method {
     methodKey :: MethodKey
   , _visibility :: Visibility
   , methodIsStatic :: Bool
-  , _methodIsFinal :: Bool
+  , methodIsFinal :: Bool
   , _isSynchronized :: Bool
   , _isStrictFp :: Bool
   , methodBody :: MethodBody
